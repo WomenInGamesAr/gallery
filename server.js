@@ -5,7 +5,6 @@
 // but feel free to use whatever libraries or frameworks you'd like through `package.json`.
 const express = require("express");
 const app = express();
-const puppeteer = require('puppeteer');
 
 // our default array of dreams
 const dreams = [
@@ -23,17 +22,6 @@ app.get("/", (request, response) => {
     response.sendFile(__dirname + "/views/index.html");
 });
 
-router.get('/screenshot/image', async(req, res, next) => {
-    const browser = await puppeteer.launch();
-    const page = await browser.newPage();
-    await page.goto(`https://wigar.glitch.me/`);
-    const screenshot = await page.screenshot({
-        type: 'png',
-        encoding: 'binary'
-    });
-    await browser.close();
-    res.send(screenshot);
-});
 // listen for requests :)
 const listener = app.listen(process.env.PORT, () => {
     console.log("Your app is listening on port " + listener.address().port);
