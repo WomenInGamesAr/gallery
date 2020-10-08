@@ -31,6 +31,8 @@ function scrollFunction() {
 
 // When the user clicks on the button, scroll to the top of the document
 function scrollToTop() {
+    //document.body.scrollTop = 0; // For Safari
+    //document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
     const c = document.documentElement.scrollTop || document.body.scrollTop;
 
     // If that number is greater than 0, we'll scroll back to 0, or the top of the document.

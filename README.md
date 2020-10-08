@@ -1,30 +1,26 @@
-# hello-express
+# Women In Games Argentina Gallery
 
-A server that serves a webpage, its resources, and some data
+Women in Games Argentina  recrea una galería virtual a partir del proyecto en glitch.com de MolleIndustria: [LikeLike The tiniest MMORPG](https://likelike.glitch.me/). El mismo nació motivado por la cuarentena y ya está siendo adoptado por la comunidad de videojuegos para clases, exhibiciones y diversas acciones. 
+De ahora en más iremos rotando contenido periódicamente para que siempre encuentres algo nuevo.
+Para disfrutar la experiencia solo necesitas una compu, tablet, o celular. 
+Podes entrar sola o acompañada, con amígues, hijes, pareja, con quien quieras. 
+Elegí tu avatar 
+Te esperamos para bailar, charlar y jugar! 
 
+# LIKELIKE Online
 
-## Your Project
+The tiniest MMORPG. Choose an avatar and hang out with your friends in a virtual version of [LIKELIKE](http://likelike.org/shows) a videogame gallery in Pittsburgh, PA.
 
-On the front-end,
+<a href="https://likelike.glitch.me/" target="_blank">>>>Try it here<<<</a>
 
-- Edit `views/index.html` to change the content of the webpage
-- `public/client.js` is the javacript that runs when you load the webpage
-- `public/style.css` is the styles for `views/index.html`
-- Drag in `assets`, like images or music, to add them to your project
+This project was created during the COVID-19 quarantine and was meant to evoke the social aspect of LIKELIKE's exhibitions.  
+You can mod it to create your own virtual exhibitions, multi-user environments or games.  
+It's designed to be extensible by just editing the data.js file and a few settings at the beginning of server.js and client.js.  
 
-On the back-end,
+The code is extensively commented but it was put together very quickly (about a 10 days) so it's not meant to be a robust, beginner-friendly tool. You'll need some node.js and javascript knowledge to adapt it to your needs. Use at your own risk.
 
-- your app starts at `server.js`
-- add frameworks and packages in `package.json`
-- safely store app secrets in `.env` (nobody can see this but you and people you invite)
+LIKELIKE Online is built with node.js, socket.io, [p5.js](https://p5js.org/), and the add-on [p5.play](https://molleindustria.github.io/p5.play/), it's hosted on [glitch.com](https://glitch.com/).  
 
-Click `Show` in the header to see your app live. Updates to your code will instantly deploy.
+LIKELIKE Online is a project by [Molleindustria](http://molleindustria.org/).  
 
-
-## Made by [Glitch](https://glitch.com/)
-
-**Glitch** is the friendly community where you'll build the app of your dreams. Glitch lets you instantly create, remix, edit, and host an app, bot or site, and you can invite collaborators or helpers to simultaneously edit code with you.
-
-Find out more [about Glitch](https://glitch.com/about).
-
-( ᵔ ᴥ ᵔ )
+Licensed under a GNU Lesser General Public License v2.1.
