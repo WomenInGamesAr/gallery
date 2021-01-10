@@ -20,7 +20,7 @@ var LURK_MODE = true;
 
 //expose the room locations on the url and make them them shareable
 //you can access the world from any point. False ignores
-var ROOM_LINK = true;
+var ROOM_LINK = false;
 
 //can by changed by user
 var SOUND = true;
