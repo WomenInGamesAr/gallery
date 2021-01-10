@@ -1401,6 +1401,9 @@ function scaleCanvas() {
 
   var form = document.getElementById("interface");
   form.setAttribute("style", "width:" + WIDTH * canvasScale + "px;");
+  
+  var projection = document.getElementById("iframe_video");
+  projection.setAttribute("style", "width:" + (WIDTH * canvasScale - 32) + "px;")
 }
 
 //I could do this in DOM (regular html and javascript elements)
