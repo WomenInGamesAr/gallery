@@ -7,9 +7,9 @@ async function getTotalVisits() {
     useUnifiedTopology: true,
   });
   const analytics = await client.db("gallery").collection("analytics");
-  const collection = analytics.countDocuments({ ip: { $nin: [null, ""] } });
+  const count = await analytics.countDocuments({ ip: { $nin: [null, ""] } });
   client.close();
-  return collection;
+  return count;
 }
 
 async function logVisitor(ip) {
