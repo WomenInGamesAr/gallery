@@ -77,6 +77,7 @@ async function getSounds() {
   const collection =  client.db("gallery").collection("sounds");
   const result = await collection.findOne({}, { _id: 0 })
   client.close();
+  return result;
 }
 
 async function getImages() {
