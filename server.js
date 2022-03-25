@@ -78,8 +78,7 @@ if (process.env.ENVIRONMENT === "production") {
   }));
 }
 
-app.use(favicon(__dirname + './public/assets/favicon.ico'));
-
+app.use(favicon(__dirname + '/public/favicon.ico'));
 
 app.get('/', (request, response) => {
   response.sendFile('./public/index.html', {
@@ -87,17 +86,20 @@ app.get('/', (request, response) => {
   })
 })
 
-app.get('/gallery', (request, response) => {
-  response.sendFile('./public/gallery.html', {
-    root: __dirname
-  })
-})
+const path = require("path");
+const router = express.Router();
+router.get("/gallery", async (req, res) => {
+  res.sendFile(path.resolve("public/gallery.html"));
+});
 
-app.get('/coc', (request, response) => {
-  response.sendFile('./public/coc.html', {
-    root: __dirname
-  })
-})
+router.get("/coc", async (req, res) => {
+  res.sendFile(path.resolve("public/coc.html"));
+});
+
+module.exports = {
+  router: router,
+};
+
 
 //when a client connects the socket is established and I set up all the functions listening for events
 io.on('connection', function (socket) {
